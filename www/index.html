@@ -83,5 +83,23 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/mangas.js"></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      var OneSignal = window.OneSignal || [];
+      var initConfig = {
+        appId: "523e7475-3624-41d0-8708-634d5d00332a",
+        notifyButton: {
+          enable: true,
+        },
+      };
+      OneSignal.push(function () {
+        OneSignal.SERVICE_WORKER_PARAM = { scope: "/push/onesignal/" };
+        OneSignal.SERVICE_WORKER_PATH = "push/onesignal/OneSignalSDKWorker.js";
+        OneSignal.SERVICE_WORKER_UPDATER_PATH =
+          "push/onesignal/OneSignalSDKUpdaterWorker.js";
+        OneSignal.init(initConfig);
+      });
+    </script>
+
   </body>
 </html>
