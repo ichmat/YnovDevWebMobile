@@ -36,9 +36,7 @@
     <link rel="manifest" href="manifest.json" />
     <script>
       window.addEventListener("load", () => {
-        if ("cordova" in window) {
-        } else {
-          if ("serviceWorker" in navigator) {
+        if ("serviceWorker" in navigator) {
             navigator.serviceWorker
               .register("sw.js", { scope: "./" })
               .then(function (reg) {});
@@ -58,7 +56,6 @@
               "push/onesignal/OneSignalSDKUpdaterWorker.js";
             OneSignal.init(initConfig);
           });
-        }
       });
     </script>
     <meta name="format-detection" content="telephone=no" />
