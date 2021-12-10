@@ -10,4 +10,14 @@ const openInAppBrowser = (link) => {
 
 const deviceReady = () => {
   window.addEventListener("batterystatus", onBatteryStatus, false);
+  window.addEventListener("offline", onOffline, false);
 };
+
+function onOffline() {
+  navigator.notification.alert(
+    'Vous êtes hors ligne',  // message
+    alertDismissed,         // callback
+    'Deconnexion',            // title
+    'Done'                  // buttonName
+);
+}

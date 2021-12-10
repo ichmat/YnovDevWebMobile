@@ -16,11 +16,25 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <preference name="StatusBarBackgroundColor" value="#ff0000" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <platform name="windows">
+        <splash src="www/img/logos/144x144.png" target="SplashScreen"/>
+        <splash src="www/img/logos/144x144.png" target="SplashScreenPhone"/> 
+    </platform>
     <platform name="android">
+        <splash src="www/img/logos/splash-hdpi.png" density="land-hdpi" />
+        <splash src="www/img/logos/splash-ldpi.png" density="land-ldpi" />
+        <splash src="www/img/logos/splash-mdpi.png" density="land-mdpi" />
+        <splash src="www/img/logos/splash-xhdpi.png" density="land-xhdpi" />
+        <splash src="www/img/logos/splash-xxhdpi.png" density="land-xxhdpi" />
+        <splash src="www/img/logos/splash-xxxhdpi.png" density="land-xxxhdpi" />
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+
     </platform>
+    <preference name="Orientation" value="landscape" />
 </widget>
